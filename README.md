@@ -19,19 +19,25 @@
 input
 
 conv 3*3*3 32
+
 conv 3*3*3 64
+
 max-pooling 2*2*2
 
 conv 3*3*3 128
+
 conv 3*3*3 256
+
 max-pooling 2*2*2
 
 dropout 0.5
 
 fc 4096
+
 dropout 0.75
 
 fc 1024
+
 dropout 0.75
 
 fc 10
@@ -45,4 +51,4 @@ softmax
 3d的heatmap空间显示
 
 # 结果
-训练的模型最终在测试集上精度为0.8左右，训练过程记录图如train_test_result.png所示
+训练的模型最终在测试集上精度为0.8左右，训练过程记录图如train_test_result.png所示，2dresult,3dresult文件夹中放的是经过lrp之后得到的heatmap
