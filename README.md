@@ -16,39 +16,46 @@
 9	1178
 
 # model.py 模型结构
+结构如下
+
 input
 
-conv 3*3*3 32
+conv-32
 
-conv 3*3*3 64
+conv-64
 
-max-pooling 2*2*2
+max-pooling
 
-conv 3*3*3 128
+conv-128
 
-conv 3*3*3 256
+conv-256
 
-max-pooling 2*2*2
+max-pooling
 
-dropout 0.5
+dropout-0.5
 
-fc 4096
+fc-4096
 
-dropout 0.75
+dropout-0.75
 
-fc 1024
+fc-1024
 
-dropout 0.75
+dropout-0.75
 
-fc 10
+fc-10
 
 softmax
+
+output
 
 # 2dresult
 2d的切片heatmap显示
 
 # 3dresult
-3d的heatmap空间显示
+3d的heatmap三维空间显示
 
 # 结果
 训练的模型最终在测试集上精度为0.8左右，训练过程记录图如train_test_result.png所示，2dresult,3dresult文件夹中放的是经过lrp之后得到的heatmap
+
+# 使用方法
+运行train.py后得到训练模型，再运行lrp.py即可，结果训练过程记录图保存为train_test_result.png，heatmap存储在2dresult、3dresult文件夹中
